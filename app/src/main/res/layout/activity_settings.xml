@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    android:layout_height="match_parent"
+    tools:context=".Settings">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/Theme.AppCompat.NoActionBar">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="#FFF"
+                android:textStyle="bold"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile"
+        android:layout_width="match_parent"
+        android:layout_marginTop="25dp"
+        android:layout_height="60dp">
+
+        <TextView
+            android:gravity="left|center"
+            android:layout_marginLeft="25dp"
+            android:text="Edit Profile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <TextView
+            android:gravity="left|center"
+            android:layout_marginLeft="25dp"
+            android:text="Update Password"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <TextView
+            android:gravity="left|center"
+            android:layout_marginLeft="25dp"
+            android:text="Sign Out"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:textSize="12sp"
+        android:textColor="@android:color/holo_red_dark"
+        android:text="1) More optimization needs to be done in order to minimize memory usage\n\n2) Since all the sensors are pushing data in 1 sec interval, the application might run out of memory for longer periods of tracking.\n\n3) The application is not be put in background while a ride is in progress otherwise resources might be snoozed in order to save battery, by the OS."
+        />
+
+</LinearLayout>
